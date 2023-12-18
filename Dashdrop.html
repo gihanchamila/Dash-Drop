@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dash Drop</title>
+
+        <link rel="stylesheet" href="dashdrop.css">
+        <link rel="icon" href="Images/favicon/favicon2.png">
+
+        <!-- Importing fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/270e75fad2.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="nav-logo-image">
+                <img src="Images/favicon/favicon2.png" alt="Logo">
+            </div>
+            <div class="logo-text">
+                <img src="Images/favicon/logo-text.png" alt="Logo-text">
+            </div>
+            <nav>
+                <ul>           
+                    <li><a href="#">Ship to</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">MyDashdrop</a></li>
+                    <li><a href="#">Contact Us</a></li>       
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button class="nav-signin-button">Sign in</button>
+                <button class="nav-signup-button">Sign up</button>
+            </div>
+            <div class="cart-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </header>      
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search for anything">
+                <button class="all-catagory-button">All Catagories <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+        </div>
+    
+        <!-- Swiper-->
+        <section class="hidden">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Blue-01.png" alt="Slide-blue"></div>
+                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Pink-01-01.png" alt="Slide-pink"></div>
+                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Red-01.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden">
+            <h2>Popular catagories</h2>
+            <div class="popular-slider">
+                <ul>
+                    <li class="popular-destination-element">
+                        <img src="Images/Popular Products/Popular-Products-01.png" alt="image 01">
+                        <div class="popular-catagories-name">Green shoes</div>
+                    </li>
+                    <li class="popular-destination-element">
+                        <img src="Images/Popular Products/Popular-Products-02.png" alt="image 01">
+                        <div class="popular-catagories-name">Brown Boots</div>
+                    </li>
+                    <li class="popular-destination-element">
+                        <img src="Images/Popular Products/Popular-Products-03.png" alt="image 01">
+                        <div class="popular-catagories-name">Polaroid</div>
+                    </li>
+                    <li class="popular-destination-element">
+                        <img src="Images/Popular Products/Popular-Products-04.png" alt="image 01">
+                        <div class="popular-catagories-name">White Chair</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>var swiper = new Swiper(".mySwiper", {});</script>
+
+        <script type="module" src="dashdrop.js"></script>
+    </body>
+</html>
