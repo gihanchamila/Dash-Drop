@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="dashdrop.css">
         <link rel="icon" href="Images/favicon/favicon2.png">
+        <link rel="stylesheet" href="navbar.css">
 
         <!-- Importing fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +42,9 @@
                 <button class="nav-signin-button">Sign in</button>
                 <button class="nav-signup-button">Sign up</button>
             </div>
+            <div class="Profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
@@ -48,10 +52,10 @@
         <div class="search-bar-container">
             <div class="search-bar">
                 <input type="text" name="search-bar" id="search-bar" placeholder="Search for anything">
-                <button class="all-catagory-button">All Catagories <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="all-catagory-button">All Catagories<i class="fa-solid fa-chevron-down"></i></button>        
             </div>
         </div>
-    
+
         <!-- Swiper-->
         <section class="hidden">
             <div class="swiper mySwiper">
@@ -68,23 +72,32 @@
             <div class="popular-slider">
                 <ul>
                     <li class="popular-destination-element">
-                        <img src="Images/Popular Products/Popular-Products-01.png" alt="image 01">
-                        <div class="popular-catagories-name">Green shoes</div>
+                        <img src="Images/Popular Products/Popular-Products-01.png" alt="image 01" class="hover-image">
+                        <div class="popular-catagories-name">Side Bags</div>
                     </li>
                     <li class="popular-destination-element">
-                        <img src="Images/Popular Products/Popular-Products-02.png" alt="image 01">
-                        <div class="popular-catagories-name">Brown Boots</div>
+                        <img src="Images/Popular Products/Popular-Products-02.png" alt="image 02" class="hover-image">
+                        <div class="popular-catagories-name">Men Boots</div>
                     </li>
                     <li class="popular-destination-element">
-                        <img src="Images/Popular Products/Popular-Products-03.png" alt="image 01">
-                        <div class="popular-catagories-name">Polaroid</div>
+                        <img src="Images/Popular Products/Popular-Products-03.png" alt="image 03" class="hover-image">
+                        <div class="popular-catagories-name">Camaras</div>
                     </li>
                     <li class="popular-destination-element">
-                        <img src="Images/Popular Products/Popular-Products-04.png" alt="image 01">
-                        <div class="popular-catagories-name">White Chair</div>
+                        <img src="Images/Popular Products/Popular-Products-04.png" alt="image 04" class="hover-image">
+                        <div class="popular-catagories-name">Furniture</div>
+                    </li>
+                    <li class="popular-destination-element">
+                        <img src="Images/Popular Products/Popular-Products-04.png" alt="image 04" class="hover-image">
+                        <div class="popular-catagories-name">Furniture</div>
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section class="hidden">
+            <h2>Daily Deals</h2>
+            <div class="dd-container"></div>
         </section>
         
         <!-- Swiper JS -->

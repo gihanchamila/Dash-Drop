@@ -1,0 +1,105 @@
+export function getProductId(productId){
+    let matchingProduct;
+
+    products.forEach((product) => {
+        if(product.id === productId){
+            matchingProduct = product
+        };
+    });
+};
+
+
+export const products = [
+    {
+        id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+        image:"Images/DailyDeals/Dailydeals-Image01.jpg",
+        name:"TITAN Black Dial Analog Watch for Men - Gents",
+        rating: {
+        stars: 4.5,
+        count: 87
+        },
+        priceCents: 10900,
+        keywords: [
+        "watch",
+        "analog watch",
+        "TITAN"
+        ]
+    },
+
+    {
+        id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+        image: "Images/DailyDeals/Dailydeals-Image02.png",
+        name: "ASUS Vivobook 15 (X1504) 13th gen",
+        rating: {
+        stars: 4.5,
+        count: 56
+        },
+        priceCents: 103000,
+        keywords: [
+        "Asus",
+        "Vivobook 15",
+        "13th gen"
+        ],
+        type: "Laptop",
+    },
+
+    {
+        id: "54e0eccd-8f36-462b-b68a-8182611d9add",
+        image: "Images/DailyDeals/Dailydeals-Image03.jpg",
+        name: "Samsung Galaxy s23 ultra promax",
+        rating: {
+        stars: 5,
+        count: 2197
+        },
+        priceCents: 100000,
+        keywords: [
+        "Samsung",
+        "S23",
+        "Galaxy"
+        ]
+    },
+
+    {
+        id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+        image: "Images/DailyDeals/Dailydeals-Image04.jpg",
+        name: "Quilty Medium Satchel Handbag",
+        rating: {
+        stars: 4,
+        count: 37
+        },
+        priceCents: 2067,
+        keywords: [
+        "Handbag"
+        ]
+    },
+
+    {
+        id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+        image: "Images/DailyDeals/Dailydeals-Image05.jpg",
+        name: "Apple iphone 15 Pro Max | 256GB",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Apple",
+        "Iphone 15"
+    ]
+    },
+
+    {
+        id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+        image: "Images/DailyDeals/Dailydeals-Image06.jpeg",
+        name: "Haylou S35 ANC Headphones - Activated Noise Cancellation Headphone - Premium Quality",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Headphones",
+        "Noise Cancellation"
+    ]
+    }
+]
