@@ -1,0 +1,41 @@
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer-column {
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h4 {
+    color: #ffffff;
+}
+
+.footer-column a {
+    line-height: 1.1;
+    text-align: left;
+    padding: 0px;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-row {
+    margin-bottom: 15px;
+}
+
+.footer-column i {
+    padding-right: 5px;
+    font-size: 0.9rem;
+}

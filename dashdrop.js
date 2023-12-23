@@ -1,4 +1,8 @@
+import { catagory } from "./catagory.js";
 import { products } from "./data/products.js";
+import { formatCurrency } from "./script/utils/money.js";
+
+// Generate HTML for products
 
 let productsHTML = "";
 
@@ -12,7 +16,7 @@ products.forEach((product) => {
                 </div>
                 <div class="dd-text">
                     <div class="dd-name">${product.name}</div>
-                    <span class="dd-price">${product.priceCents}</span>
+                    <span class="dd-price">$${formatCurrency(product.priceCents)}</span>
                 </div>
                 <label for="dd-quantity-content">
                     <select class="dd-quantity" name="dd-quantity" id="dd-quantity">
@@ -28,12 +32,30 @@ products.forEach((product) => {
                         <option value="10">10</option>
                     </select>
                 </label>
+                <button class="addtoCart-button">Add to Cart</button>
             </div>
         </div>
     `
 });
 
 document.querySelector(".dd-container").innerHTML = productsHTML;
+
+let catagoryHTML = "";
+
+catagory.forEach((catagory) => {
+    catagoryHTML += `
+        <li class="popular-destination-element">
+            <img src="${catagory.image}" alt="image 01" class="hover-image">
+            <div class="popular-catagories-name">${catagory.name}</div>
+            <div class="ps-show-more"><button class="show-more-button">Show More</button></div>
+        </li>
+
+    `
+});
+console.log(catagoryHTML)
+document.querySelector('.popular-slider-ul').innerHTML = catagoryHTML
+
+
 
 // Observer
 

@@ -8,7 +8,6 @@ export function getProductId(productId){
     });
 };
 
-
 export const products = [
     {
         id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -18,6 +17,7 @@ export const products = [
         stars: 4.5,
         count: 87
         },
+        type:"Watch",
         priceCents: 10900,
         keywords: [
         "watch",
@@ -100,6 +100,66 @@ export const products = [
         keywords: [
         "Headphones",
         "Noise Cancellation"
+    ]
+    },
+
+    {
+        id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c73",
+        image: "Images/DailyDeals/Dailydeals-Image07.jpeg",
+        name: "Buy Gandiva® Economical 18.5-inch All in One CI5 Desktop Computer",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Desktop",
+        "All in one"
+    ]
+    },
+
+    {
+        id: "9c9c52b5-5a19-4bcb-a5d1-158a74787c73",
+        image: "Images/DailyDeals/Dailydeals-Image08.webp",
+        name: "DC Comics, 12-inch Combat Batman Action Figure",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Desktop",
+        "All in one"
+    ]
+    },
+
+    {
+        id: "9b9c52b5-5a19-4bcb-a5d1-158a74787c73",
+        image: "Images/DailyDeals/Dailydeals-Image09.jpeg",
+        name: "Intel Core I7-13700 Processor 30M Cache, Up To 5.20 GHz",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Desktop",
+        "All in one"
+    ]
+    },
+    
+    {
+        id: "9b9c52b5-5a19-4bcb-a5d1-158a74787c73",
+        image: "Images/DailyDeals/Dailydeals-Image10.png",
+        name: "Moose Comfort Fit Crew Neck T Shirt - Olympic Blue",
+        rating: {
+        stars: 4.5,
+        count: 175
+        },
+        priceCents: 3499,
+        keywords: [
+        "Desktop",
+        "All in one"
     ]
     }
 ]
