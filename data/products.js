@@ -8,6 +8,43 @@ export function getProductId(productId){
     });
 };
 
+export const category = [
+    {
+        name:"Camera and Accessories",
+        image:"Images/Category/camera-and-accessories.png",
+        link:"Category/Camera and Accessories.html",
+        products:[]
+    },
+
+    {
+        name:"Books and Magazine",
+        image:"Images/Category/Books & Magazine.png",
+        link:"Category/Books and Magazine.html",
+        products:[]
+    },
+
+    {
+        name:"Cell Phone and Accessories",
+        image:"Images/Category/cell-phone-and-accessories.png",
+        link:"Category/Cell Phone and Accessories.html",
+        products:[]
+    },
+
+    {
+        name:"Clothing, Shoes and Accessories",
+        image:"Images/Category/Clothing, Shoes & Accessories.png",
+        link:"Category/Clothing, Shoes and Accessories.html",
+        products:[]
+    },
+
+    {
+        name:"Computers and Accessories",
+        image:"Images/Category/Computers & Accessories.png",
+        link:"Category/Computers and Accessories.html",
+        products:[]
+    }
+]
+
 export const products = [
     {
         id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -17,7 +54,10 @@ export const products = [
         stars: 4.5,
         count: 87
         },
-        type:"Watch",
+        category:{
+            name:"Clothing, Shoes & Accessories",
+            link:"Clothing, Shoes & Accessories.html"
+        },
         priceCents: 10900,
         keywords: [
         "watch",
@@ -34,6 +74,7 @@ export const products = [
         stars: 4.5,
         count: 56
         },
+        category:"Camera and Accessories",
         priceCents: 103000,
         keywords: [
         "Asus",
@@ -51,6 +92,10 @@ export const products = [
         stars: 5,
         count: 2197
         },
+        category:{
+            name:"Cell phone and Accessories",
+            link:"Cell phone and Accessories.html"
+        },
         priceCents: 100000,
         keywords: [
         "Samsung",
@@ -67,6 +112,7 @@ export const products = [
         stars: 4,
         count: 37
         },
+        category:"Clothing, Shoes & Accessories",
         priceCents: 2067,
         keywords: [
         "Handbag"
@@ -81,6 +127,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Cell phone and Accessories",
         priceCents: 3499,
         keywords: [
         "Apple",
@@ -96,6 +143,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Cell phone and Accessories",
         priceCents: 3499,
         keywords: [
         "Headphones",
@@ -111,6 +159,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Computers and Accessories",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -126,6 +175,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Toys",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -141,6 +191,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Computers and Accessories",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -156,6 +207,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
+        category:"Clothing, Shoes & Accessories",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -163,3 +215,6 @@ export const products = [
     ]
     }
 ]
+
+
+

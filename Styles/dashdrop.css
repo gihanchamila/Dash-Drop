@@ -69,6 +69,13 @@ body {
     flex-direction: column;
 }
 
+.popular-slider ul li a{
+    display: initial;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
 .popular-destination-element {
     box-sizing: border-box;
     background-color: rgba(189, 188, 188, 0.097);

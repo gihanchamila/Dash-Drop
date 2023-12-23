@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dash Drop</title>
 
-        <link rel="stylesheet" href="Styles/dashdrop.css">
-        <link rel="stylesheet" href="Styles/navbar.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <link rel="icon" href="Images/favicon/favicon2.png">
+        <link rel="stylesheet" href="../Styles/navbar.css">
+        <link rel="stylesheet" href="../Styles/product.css">
+        <link rel="stylesheet" href="../Styles/footer.css">
+        <link rel="icon" href="../Images/favicon/favicon2.png">
 
         <!-- Importing fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,20 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <style>
+                
+
+        </style>
     </head>
     <body>
+        <!-- Header Section -->
         <header>
             <div class="nav-logo-image">
-                <img src="Images/favicon/favicon2.png" alt="Logo">
+                <img src="../Images/favicon/favicon2.png" alt="Logo">
             </div>
             <div class="logo-text">
-                <img src="Images/favicon/logo-text.png" alt="Logo-text">
+                <img src="../Images/favicon/logo-text.png" alt="Logo-text">
             </div>
             <nav>
                 <ul>           
@@ -56,34 +62,39 @@
                 <button class="all-catagory-button">All Catagories</i></button>              
                 <div class="dropdown-content">dropdown</div>
             </div>
+            
         </div>
 
-        <!-- Swiper-->
         <section class="hidden">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Blue-01.png" alt="Slide-blue"></div>
-                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Pink-01-01.png" alt="Slide-pink"></div>
-                    <div class="swiper-slide"><img src="Images/Slides/BuyNow-Red-01.png" alt=""></div>
+            <h2>Cell Phone and Accessories</h2>
+            <div class="product-container">
+                <div class="product-element">
+                    <div class="product-content">
+                        <div class="product-image">
+                            <img src="Images/DailyDeals/Dailydeals-Image02.png" class="hover-image">
+                        </div>
+                        <div class="product-text">
+                            <div class="product-name">Asus vivobook 15 </div>
+                            <span class="product-price">1020</span>
+                        </div>
+                        <label for="product-quantity-content">
+                            <select class="product-quantity" name="product-quantity" id="product-quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </label>
+                        <button class="product-addtoCart-button">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Popular catagory -->
-
-        <section class="hidden">
-            <h2>Popular categories</h2>
-            <div class="popular-slider">
-                <ul class="popular-slider-ul">
-                </ul>
-            </div>
-        </section>
-
-        <!-- Daily deals -->
-
-        <section class="hidden">
-            <h2>Daily Deals</h2>
-            <div class="dd-container"></div>
         </section>
 
         <!-- Footer Section -->
@@ -150,6 +161,19 @@
         <!-- Initialize Swiper -->
         <script>var swiper = new Swiper(".mySwiper", {});</script>
 
-        <script type="module" src="dashdrop.js"></script>
+        <script>
+                const observer = new IntersectionObserver((entries) => {entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                }
+            });
+        });
+        const hiddenElement =document.querySelectorAll('.hidden')
+        hiddenElement.forEach((el) => {
+            observer.observe(el)
+        });
+        </script>
     </body>
 </html>
