@@ -112,14 +112,14 @@ body {
 }
 /* dailydeal-slider */
 
-.dd-container {
+.p-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding-bottom: 20px;
 }
 
-.dailydeal-element {
+.p-element {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,20 +127,20 @@ body {
     border: 1px solid black;
 }
 
-.dd-image img{
+.p-image img{
     height: 200px;
     width: 200px;
     padding: 20px;
 }
 
-.dd-text {
+.p-text {
     padding: 0px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.dd-name {
+.p-name {
     font-size: 0.9rem;
     margin: 0px;
     overflow: hidden;
@@ -152,15 +152,19 @@ body {
     text-wrap: wrap;
 }
 
-.dd-price {
+.p-price {
     font-size: 0.8rem;
     margin-top: 5px; /* Adjust the value as needed */
 }
 
-.dd-quantity {
+.p-quantity {
     margin: 5px 5px 20px 20px;
     border: solid black 1px;
     padding: 4px 0px;
+}
+
+select option{
+    border-color: blueviolet;
 }
 
 .addtoCart-button {
@@ -171,4 +175,4 @@ body {
 }
  tbody td ul {
     padding: 0px;
- }
+}

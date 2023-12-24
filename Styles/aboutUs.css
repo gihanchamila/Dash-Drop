@@ -1,0 +1,54 @@
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.AboutUs-left-title, .ourStory-left-title, .ourMission-title, .whatSets-title-main, .JoinUs-title {
+    font-size: 3.0rem;
+}
+
+.AboutUs-left, .ourStory-left{
+    flex: 1;
+}
+
+.AboutUs-right i {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AboutUs-right, .ourStory-right{
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.ourStory-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.ourMission-container, .JoinUs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.whatSets-title-main {
+    padding-bottom: 20px;
+}
+
+.whatSets-title {
+    font-size: 1.5rem;
+}

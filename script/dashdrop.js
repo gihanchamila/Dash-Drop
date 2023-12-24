@@ -1,5 +1,6 @@
-import { products, category } from "./data/products.js";
-import { formatCurrency } from "./script/utils/money.js";
+import { products } from "../data/products.js";
+import { formatCurrency } from "./utils/money.js";
+import { category } from "../data/category.js";
 
 // Generate HTML for products
 
@@ -8,17 +9,17 @@ import { formatCurrency } from "./script/utils/money.js";
     products.forEach((product) => {
         productsHTML +=
         `
-            <div class="dailydeal-element">
-                <div class="dd-content">
-                    <div class="dd-image">
+            <div class="p-element">
+                <div class="p-content">
+                    <div class="p-image">
                         <img src="${product.image}" class="hover-image">
                     </div>
-                    <div class="dd-text">
-                        <div class="dd-name">${product.name}</div>
-                        <span class="dd-price">$${formatCurrency(product.priceCents)}</span>
+                    <div class="p-text">
+                        <div class="p-name">${product.name}</div>
+                        <span class="p-price">$${formatCurrency(product.priceCents)}</span>
                     </div>
-                    <label for="dd-quantity-content">
-                        <select class="dd-quantity" name="dd-quantity" id="dd-quantity">
+                    <label for="p-quantity-content">
+                        <select class="p-quantity" name="p-quantity" id="p-quantity">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -38,7 +39,7 @@ import { formatCurrency } from "./script/utils/money.js";
       
 });
 
-document.querySelector(".dd-container").innerHTML = productsHTML;
+document.querySelector(".p-container").innerHTML = productsHTML;
 
 let categoryHTML = "";
 

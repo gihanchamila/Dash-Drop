@@ -14,6 +14,19 @@ header i {
     padding: 0px 10px;
 }
 
+.logo-text a {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-logo-image a{
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo-text a  img{
+}
+
 .nav-logo-image img {
     max-height: 40px;
 }
@@ -30,16 +43,13 @@ nav ul {
     align-items: center;
 }
 
-li {
-    margin: 0px 10px;
-}
-
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     display: block;
     text-align: center;
-    padding:10px 8px;
+    padding:10px 12px;
+    margin-right: 8px;
 }
 
 .nav-buttons button {
@@ -55,18 +65,18 @@ a {
 
 .search-bar-container {
     display: flex;
-    margin: 0px;
+    margin-right: 21px;
     justify-content: center;
 }
 
 .logo-text img{
     height: 25px;
-    margin: 0px 20px;
+    padding-left: 25px;
 }
 
 
 .search-bar button {
-    padding: 6px 12px;
+    padding: 6px 14px;
     border: 1px solid black;
     background-color: white;
     margin: -12px;
