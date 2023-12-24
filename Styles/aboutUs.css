@@ -3,20 +3,23 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1rem;
 }
 
 .aboutUs-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content:space-between;
     align-items: center;
 }
 
 .AboutUs-left-title, .ourStory-left-title, .ourMission-title, .whatSets-title-main, .JoinUs-title {
     font-size: 3.0rem;
+    font-weight: 700;
 }
 
 .AboutUs-left, .ourStory-left{
     flex: 1;
+    padding-right: 50px;
 }
 
 .AboutUs-right i {
@@ -25,16 +28,13 @@ section {
     align-items: center;
 }
 
-.AboutUs-right, .ourStory-right{
-    justify-content: flex-end;
-    flex: 1;
-}
-
 .ourStory-container {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+}
 
+.ourStory-left {
+    padding-left: 50px;
 }
 
 .ourMission-container, .JoinUs-container {
