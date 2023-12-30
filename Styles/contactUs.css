@@ -1,0 +1,15 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+section {
+    height: 30vh;
+    padding: 50px 0px;
+    font-size: 1.1rem;
+    
+}
+
+.cu-title {
+    font-size: 3.0rem;
+    font-weight: 700;
+}

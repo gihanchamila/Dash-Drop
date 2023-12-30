@@ -8,6 +8,8 @@ export function getProductId(productId){
     });
 };
 
+
+
 export const products = [
     {
         id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -17,10 +19,7 @@ export const products = [
         stars: 4.5,
         count: 87
         },
-        category:{
-            name:"Clothing, Shoes & Accessories",
-            link:"Clothing, Shoes & Accessories.html"
-        },
+        category:"fashionCategory",
         priceCents: 10900,
         keywords: [
         "watch",
@@ -37,7 +36,7 @@ export const products = [
         stars: 4.5,
         count: 56
         },
-        category:"Camera and Accessories",
+        category:"computersCategory",
         priceCents: 103000,
         keywords: [
         "Asus",
@@ -55,10 +54,7 @@ export const products = [
         stars: 5,
         count: 2197
         },
-        category:{
-            name:"Cell phone and Accessories",
-            link:"Cell phone and Accessories.html"
-        },
+        category:"cellPhoneCategory",
         priceCents: 100000,
         keywords: [
         "Samsung",
@@ -75,7 +71,7 @@ export const products = [
         stars: 4,
         count: 37
         },
-        category:"Clothing, Shoes & Accessories",
+        category:"fashionCategory",
         priceCents: 2067,
         keywords: [
         "Handbag"
@@ -90,7 +86,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
-        category:"Cell phone and Accessories",
+        category:"cellPhoneCategory",
         priceCents: 3499,
         keywords: [
         "Apple",
@@ -106,8 +102,8 @@ export const products = [
         stars: 4.5,
         count: 175
         },
-        category:"Cell phone and Accessories",
-        priceCents: 3499,
+        category:"cellPhoneCategory",
+        priceCents: 3599,
         keywords: [
         "Headphones",
         "Noise Cancellation"
@@ -122,7 +118,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
-        category:"Computers and Accessories",
+        category:"computersCategory",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -154,7 +150,7 @@ export const products = [
         stars: 4.5,
         count: 175
         },
-        category:"Computers and Accessories",
+        category:"computersCategory",
         priceCents: 3499,
         keywords: [
         "Desktop",
@@ -170,14 +166,69 @@ export const products = [
         stars: 4.5,
         count: 175
         },
-        category:"Clothing, Shoes & Accessories",
+        category:"fashionCategory",
         priceCents: 3499,
         keywords: [
         "Desktop",
         "All in one"
     ]
+    },
+
+    {
+        id: "9b9c52b5-5a19-4bcb-a5d1-158a74987c73",
+        image: "Images/DailyDeals/Dailydeals-Image11.jpg",
+        name: "Diary Of A Wimpy Kid Box Of Books Books 1-13 Diy Book ",
+        rating: {
+        stars: 4.8,
+        count: 175
+        },
+        category:"booksCategory",
+        priceCents: 3499,
+        keywords: [
+        "Diary Of A Wimpy Kid",
+        "Books"
+    ]
+    },
+
+    {
+        id: "9b9c52b5-5a19-4bcb-a6d1-158a74987c73",
+        image: "Images/DailyDeals/Dailydeals-Image12.jpg",
+        name: "Nikon D5600 DSLR Camera with 18-55mm Lens - Hypercart",
+        rating: {
+        stars: 4.8,
+        count: 175
+        },
+        category:"camaraCategory",
+        priceCents: 85050,
+        keywords: [
+        "Nikon",
+        "Nikon D5600",
+        "DSLR"
+
+    ]
     }
 ]
 
+export const categories = {
+    camaraCategory: [],
+    booksCategory: [],
+    cellPhoneCategory: [],
+    fashionCategory: [],
+    computersCategory: [],
+};
 
+products.forEach((product) => {
+    if (Array.isArray(product.category)) {
+        product.category.forEach((categoryName) => {
+            if (categories.hasOwnProperty(categoryName)) {
+                categories[categoryName].push(product);
+            }
+        });
+    } else {
+        if (categories.hasOwnProperty(product.category)) {
+            categories[product.category].push(product);
+        }
+    }
+});
 
+console.log(categories)
