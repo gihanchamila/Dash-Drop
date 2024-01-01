@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dash Drop</title>
+
+        <link rel="stylesheet" href="Styles/dashdrop.css">
+        <link rel="stylesheet" href="Styles/navbar.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="icon" href="Images/favicon/favicon2.png">
+
+        <!-- Importing fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/270e75fad2.js" crossorigin="anonymous"></script>
+
+        <style>
+            :root {
+                --background:#1F2336;
+                --box-background:#313851;
+                --secondary:#F1F1F1;
+                --primary:#F4BD50;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: var(--box-background);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Poppins";
+            }
+
+            .box {
+                background-color: var(--box-background);
+                padding: 24px;
+                max-width: fit-content;
+                width: 100%;
+                padding-top: 12px;
+                border-radius: 16px;
+
+            }
+
+            .box h2 {
+                margin: 0;
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+
+            .input-wrapper {
+                position: relative;
+                padding: 15px 0 0;
+
+            }
+
+            .input-field {
+                outline: 1.5px solid var(--secondary);
+                font-size: 1.0rem;
+                border-radius: 8px;
+                color: var(--secondary);
+                padding: 8px;
+                border: none;
+                padding-right: 32px;
+                background: transparent;
+                transition: all 0.2s;
+            }
+
+            .input-field ::placeholder {
+                color: transparent;
+            }
+
+            .input-field :placeholder-shown .input-label {
+                font-size: 1.0rem;
+                cursor: text;
+                color: var(--secondary);
+                top: 24px;
+
+            }
+            label.input-field:focus.input-label {
+                position: absolute;
+                top: 6px;
+                padding: 0 4px;
+                background-color: var(--box-background);
+                display: block;
+                font-size: 14px;
+                left: 8px;
+                color: var(--secondary);
+                transition: 0.3s;
+            }
+
+            .input-field:focus.input-label {
+                color: var(--primary);
+            }
+
+            .input-field:focus {
+                outline: 1.5px solid var(--primary);
+            }
+
+            .input-icon {
+                position: absolute;
+                right: -10px;
+                bottom: -10px;
+                width: 28px;
+                height: 28px;
+                transform: translate(-50%, -50%);
+                transform-origin: center;
+                cursor: pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            <div class="input-wrapper">
+                <input type="password" id="password" name="password" placeholder="password" title="Minimum characters at least 1 Alphabet and 1 number" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/" required class="input-field">
+                <label for="password" class="input-label">Password</label>
+                <img src="Images/SignIn/eye-regular.svg" alt="eye-image" title="eye-icon" class="input-icon">
+            </div>
+        </div>
+        <script>
+            const input = document.querySelector(".input-field")
+            const inputIcon = document.querySelector(".input-icon")
+
+            inputIcon.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                inputIcon.setAttribute(
+                    "src",
+                    input.getAttribute("type") === "password" ? "eye-regular" :"eye-regular"
+                );
+
+                input.setAttribute(
+                    "type",
+                    input.getAttribute("type") === "password" ? "text" : "password"
+                )
+            });
+        </script>
+    </body>
+</html>

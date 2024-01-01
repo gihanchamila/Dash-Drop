@@ -3,10 +3,10 @@ body {
     margin: 0px;
 }
 section {
-    height: 30vh;
-    padding: 50px 0px;
+    height: 50vh;
     font-size: 1.1rem;
-    
+    padding: 100px 100px;
+    box-sizing: border-box;  
 }
 
 .cu-title {

@@ -1,6 +1,4 @@
 body {
-    margin:0px;
-    padding: 0px 100px;
     font-family:'Poppins', sans-serif;
 }
 
@@ -8,6 +6,7 @@ header {
     display: flex;
     justify-content:center;
     align-items: center;
+    padding: 0px 100px;
 }
 
 header i {
@@ -22,9 +21,6 @@ header i {
 .nav-logo-image a{
     padding: 0px;
     margin: 0px;
-}
-
-.logo-text a  img{
 }
 
 .nav-logo-image img {

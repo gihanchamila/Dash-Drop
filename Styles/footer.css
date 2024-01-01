@@ -1,7 +1,6 @@
 body {
-    margin:0px;
-    padding: 0px 100px;
     font-family:'Poppins', sans-serif;
+    
 }
 
 footer {
@@ -9,8 +8,7 @@ footer {
     color: #ffffff;
     display: flex;
     justify-content: space-between;
-    padding: 0px;
-    margin: 0px;
+    margin: 0px 100px;
 }
 
 .footer-column {
