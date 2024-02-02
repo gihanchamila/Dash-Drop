@@ -1,15 +1,50 @@
 body {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
 }
-section {
-    height: 50vh;
-    font-size: 1.1rem;
+.container {
+    font-size: 1rem;
     padding: 100px 100px;
     box-sizing: border-box;  
 }
 
 .cu-title {
-    font-size: 3.0rem;
+    font-size: 2.5rem;
     font-weight: 700;
+}
+
+.businessInquiries-container, .feedback-container {
+    background-color: #f7f7f7;
+}
+
+.feedback-container {
+    margin-bottom: 100px;
+}
+
+.contactUs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+}
+
+.cu-left {
+    flex: 1;
+}
+
+.headquarters-address{
+    display: flex;
+    align-items: center;
+}
+
+.fa-location-dot {
+    font-size: 2.5rem;
+    padding-right: 15px;
+}
+
+.fa-envelope, .fa-phone, .fa-location-dot {
+    padding-right: 5px;
+}
+
+.fa-location-dot {
+    color: black;
 }
