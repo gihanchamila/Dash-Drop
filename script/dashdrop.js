@@ -1,6 +1,7 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { category } from "../data/category.js";
+import { cart } from "../data/cart.js";
 
 // Generate HTML for products
 
@@ -32,7 +33,7 @@ import { category } from "../data/category.js";
                             <option value="10">10</option>
                         </select>
                     </label>
-                    <button class="addtoCart-button">Add to Cart</button>
+                    <button class="addtoCart-button js-addToCart-button" data-product-id="${product.id}">Add to Cart</button>
                 </div>
             </div>
         `
@@ -82,3 +83,9 @@ hiddenElement.forEach((el) => {
     observer.observe(el)
 });
 
+document.querySelectorAll("js-addToCart-button").forEach((button) => {
+    button.addEventListener('Click',() => {
+        const productId = data.dataset.productId
+        addToCart(productId)
+    })
+});
