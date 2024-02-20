@@ -1,4 +1,4 @@
-export function getProductId(productId){
+export function getProduct(productId){
     let matchingProduct;
 
     products.forEach((product) => {
@@ -6,9 +6,8 @@ export function getProductId(productId){
             matchingProduct = product
         };
     });
+    return matchingProduct;
 };
-
-
 
 export const products = [
     {
@@ -231,5 +230,3 @@ products.forEach((product) => {
         }
     }
 });
-
-console.log(categories)

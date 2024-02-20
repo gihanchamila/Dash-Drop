@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dash Drop</title>
+
+        <link rel="stylesheet" href="Checkout.css">
+        <link rel="stylesheet" href="Styles/navbar.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <link rel="icon" href="Images/favicon/favicon2.png">
+
+        <!-- Importing fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/270e75fad2.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+        <header class="">
+            <div class="nav-logo-image">
+                <a href="Dashdrop.html"><img src="Images/favicon/favicon2.png" alt="Logo"></a>
+            </div>
+            <div class="logo-text">
+                <a href="Dashdrop.html"><img src="Images/favicon/logo-text.png" alt="Logo-text"></a>
+            </div>
+            <nav>
+                <ul>           
+                    <li><a href="Dashdrop.html">Home</a></li>
+                    <li><a href="Navigation Links/Become a seller.html">Become a seller</a></li>
+                    <li><a href="Navigation Links/Help and Support.html">Help and Support</a></li>
+                    <li><a href="Navigation Links/AboutUs.html">About Us</a></li>
+                    <li><a href="Navigation Links/ContactUs.html">Contact Us</a></li>       
+                </ul>
+            </nav>
+            <div class="nav-buttons" class="hidden">
+                <button class="nav-signin-button">Sign in</button>
+                <button class="nav-signup-button">Sign up</button>
+            </div>
+            <div class="Profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-item">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </header>      
+        <div class="search-bar-container hidden">
+            <div class="search-bar">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search for anything">
+                <button class="all-catagory-button">All Catagories</i></button>              
+                <div class="dropdown-content">dropdown</div>
+            </div>
+        </div>
+
+        <section>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <h2>Shopping cart</h2>
+
+                    <div class="product-items">
+                        <i class="fa-sharp fa-solid fa-xmark"></i>
+                        <div class="product-image">
+                            <img src="Images/DailyDeals/Dailydeals-Image01.jpg" alt="" class="product-image">
+                        </div>
+                        <div class="product-name">
+                            <h3>Apple iphone 15 Pro Max | 256GB</h3>
+                            <div class="product-price">US $33.47</div>
+                            <div class="product-quantity">
+                                <span>Quantity</span>
+                                <select>
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <h3 class="delivery-option-name">Choose delivery option</h3>
+                            <form action="">
+                                <div>
+                                    <input type="radio" id="1">
+                                    <label for="free-shipping delivery-date">wednesday, March 20</label>                                 
+                                    <span class="shipping-cost delivery-date"> | Free - Shipping</span> 
+                                </div>
+                                <div>
+                                    <input type="radio" id="2">
+                                    <label for="free-shipping delivery-date">Thursday, March 05</label>                        
+                                    <span class="shipping-cost delivery-date"> | $9.99 - Shipping</span>
+                                </div>
+                                <div>
+                                    <input type="radio" checked id="3">
+                                    <label for="free-shipping delivery-date">Thursday, February 27</label>
+                                    <span class="shipping-cost delivery-date"> | $19.99 - Shipping</span>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>                
+                <section class="payment-summary">
+                    <h2>payment summary</h2>
+                    <div class="payment-summary-container">
+                        <div class="order-summary-container">
+                            <h3 class="order-now-title">Order summary</h3>
+                            <div>
+                                <div class="payment-summary-row">
+                                    <div>Items(10)</div>
+                                    <div class="payment-summary-money">$47.83</div>
+                                </div>
+                                <div class="payment-summary-row">
+                                    <div>Shipping and handling</div>
+                                    <div class="payment-summary-money">$47.83</div>
+                                </div>
+                                <div class="payment-summary-row">
+                                    <div>Total before tax</div>
+                                    <div class="payment-summary-money">$47.83</div>
+                                </div>
+                                <div class="payment-summary-row css-payment-summary-money">
+                                    <div>Estimeted tax(10%)</div>
+                                    <div class="payment-summary-money css-payment-summary-money">$47.83</div>
+                                </div>
+                                <div class="payment-summary-row order-now">
+                                    <div >Order Total</div>
+                                    <div class="payment-summary-money">$47.83</div>
+                                </div>
+                                <button class="payment-summary-button">Buy Now</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section> 
+            </div>
+        </section>
+
+        <footer class="">
+            <div class="footer-column">
+                <h4>Buy</h4>
+                <div class="footer-row">
+                    <a href="#">Sell</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#">Dashdrop Money Back Guarantee</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#">Stores</a>
+                </div>
+            </div>
+        
+            <div class="footer-column">
+                <h4>About Dashdrop</h4>
+                <div class="footer-row">
+                   <a href="#">Company info </a>
+                </div>
+                <div class="footer-row">
+                    <a href="#">News</a>
+                </div>
+            </div>
+        
+            <div class="footer-column">
+                <h4>Help & Contact</h4>
+                <div class="footer-row">
+                    <a href="#">Seller Information Center</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+        
+            <div class="footer-column">
+                <h4>Community</h4>
+                <div class="footer-row">
+                    <a href="#">Announcements</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#">Discussion boards</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Stay connected</h4>
+                <div class="footer-row">
+                    <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                </div>
+                <div class="footer-row">
+                    <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+        </footer>   
+    </body>
+</html>

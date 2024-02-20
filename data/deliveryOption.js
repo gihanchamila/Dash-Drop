@@ -1,11 +1,15 @@
 export const deliveryOptions = [{
     id: "1",
-    deliveryDays: 3,
-    priceCents:499
+    deliveryDays: 21,
+    priceCents:0
 }, {
-    id: "",
-    deliveryDays: 7,
-    priceCents:999
+    id: "2",
+    deliveryDays: 10,
+    priceCents:999 
+}, {
+    id: "3",
+    deliveryDays: 3,
+    priceCents:1999 
 }];
 
 export function getDeliverOption(deliveryOptionId){

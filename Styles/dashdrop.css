@@ -154,6 +154,11 @@ body {
 
 }
 
+a {
+    padding:0;
+    margin: 0;
+}
+
 .p-image img{
     height: 200px;
     width: 200px;
@@ -194,7 +199,7 @@ select option{
     border-color: blueviolet;
 }
 
-.addtoCart-button {
+.cart-button {
     padding: 4px 12px;
     border: 1px solid black;
     margin: 0px 6px;

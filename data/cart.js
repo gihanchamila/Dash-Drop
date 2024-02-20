@@ -1,8 +1,8 @@
 export let cart = JSON.parse(localStorage.getItem('cart'))
 
 if ((!cart)){
-    cart = 
-    [{
+     cart = 
+    [/*{
         id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
         image:"Images/DailyDeals/Dailydeals-Image01.jpg",
         name:"TITAN Black Dial Analog Watch for Men - Gents",
@@ -34,28 +34,70 @@ if ((!cart)){
         ],
         type: "Laptop",
 
-    }]
+    }*/]
 };
 
-console.log(cart)
 
 export function saveToStorage(){
     localStorage.setItem('cart', JSON.stringify(cart))
 };
 
-
-
 export function addToCart(productId) {
     let matchingItem;
 
     cart.forEach((cartItem) => {
-        if(productId = cartItem.productId){
+        if(productId === cartItem.productId){
             matchingItem = cartItem
         };
-        
     });
 
     if (matchingItem){
-   
+        matchingItem.quantity += 1
+    } else {
+        cart.push ({
+            productId: productId,
+            quantity:1,
+            deliveryOptionId: "1"
+        })
     };
+    saveToStorage();
+};
+
+export function removeFromCart(productId){
+    const newCart = [];
+
+    cart.forEach((cartItem) => {
+        if(productId !== cartItem.productId){
+            newCart.push(cartItem)
+        };
+
+    });
+    cart = newCart
+    saveToStorage()
+};
+
+export function removeAllFromCart() {
+    const newCart = [];
+    cart = newCart; // Emptying the cart array
+    saveToStorage();
 }
+
+
+export function updateDeliveryOption(productId, deliveryOptionId){
+    let matchingItem;
+    cart.forEach((cartItem) => {
+        if(productId === cartItem.productId){
+            matchingItem = cartItem
+        };
+    });
+     matchingItem.deliveryOptionId = deliveryOptionId;
+     saveToStorage()
+};
+
+export function updateCartQuantity(){
+    let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity
+    });
+};
