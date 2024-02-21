@@ -101,3 +101,19 @@ document.querySelectorAll('.hover-image').forEach(image => { // Step 4
         window.open(productDetailsUrl, '_blank'); // Step 7
     });
 });
+
+document.querySelector(".fa-cart-shopping").addEventListener('click', (event) => {
+    const checkoutHTML = "./Checkout.html"
+    window.open(checkoutHTML, "_blank")
+    alert("Fuck")
+})
+
+document.querySelector(".nav-signin-button").addEventListener('click', (event) => {
+    const signInHTML = "./Signin.html"
+    window.open(signInHTML, "_blank")
+});
+
+document.querySelector(".nav-signup-button").addEventListener('click', () => {
+    const signUpHTML = "./SignUp.html"
+    window.open(signUpHTML, "_blank")
+})

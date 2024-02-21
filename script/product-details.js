@@ -1,5 +1,5 @@
-import { products } from "./data/products.js";
-import { formatCurrency } from "./script/utils/money.js";
+import { products } from "../data/products.js";
+import { formatCurrency } from "./utils/money.js";
 
 function generateProductDetailsHTML(product) {
     return `
