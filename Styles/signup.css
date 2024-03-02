@@ -1,3 +1,7 @@
+.search-bar {
+    display: none;
+}
+
 .create-account-container {
     display: flex;
     align-items: center;

@@ -1,9 +1,13 @@
+.search-bar {
+    display: none;
+}
+
 .create-account-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 .create-account-container span {
@@ -87,4 +91,66 @@
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+/* For small screens */
+@media screen and (max-width: 768px) {
+    .search-bar {
+        display: none;
+    }
+    .create-account-container {
+        padding-bottom: 100px;
+    }
+    
+    .create-account-container h2 {
+        font-size: 1.4rem;
+    }
+    
+    
+    .autoauthentication a {
+        justify-content: flex-start;
+
+    }
+    
+    
+    .password-input-container {
+        position: relative;
+    }
+    
+    .toggle-password,
+    .toggle-repeat-password {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .create-account-container {
+        padding-bottom: 150px;
+    }
+    
+    .create-account-container h2 {
+        font-size: 1.72rem;
+    }
+    
+    .account-signin input {
+        width: 250px;
+    }
+
+    .autoauthentication a {
+        justify-content: center;
+        padding-left: 0; 
+    }
+    
+    .autoauthentication-image {
+        display: inline-block; 
+    }
+    
+    .password-input-container {
+        position: relative;
+    }
+    
+    .toggle-password,
+    .toggle-repeat-password {
+        display: block; 
+    }
 }

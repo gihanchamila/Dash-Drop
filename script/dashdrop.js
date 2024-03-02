@@ -1,7 +1,7 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { category } from "../data/category.js";
-import { addToCart, updateCartQuantity } from "../data/cart.js";
+import { addToCart, cart, updateCartQuantity } from "../data/cart.js";
 
 // Generate HTML for products
 let productsHTML = "";
@@ -89,7 +89,6 @@ document.querySelectorAll('.js-cart-button').forEach((button) => {
         const productId = button.dataset.productId;
         addToCart(productId);
         updateCartQuantity();
-        alert('clicked')
     });
 });
 
@@ -117,3 +116,5 @@ document.querySelector(".nav-signup-button").addEventListener('click', () => {
     const signUpHTML = "./SignUp.html"
     window.open(signUpHTML, "_blank")
 })
+
+console.log(cart)

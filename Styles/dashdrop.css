@@ -2,7 +2,6 @@ body {
     font-family:'Poppins', sans-serif;
     padding: 0px 100px;
 }
-
 /* Swiper */
 
 .swiper {
@@ -207,4 +206,73 @@ select option{
 }
  tbody td ul {
     padding: 0px;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    body {
+    }
+
+    .swiper-slide img {
+        height: 200px;
+    }
+
+    .popular-slider ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .popular-destination-element img {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+        object-fit: cover;
+        align-self: center;
+        padding-top: 18px;
+    }
+
+    .cell-left-title {
+        font-size: 1.5rem;
+    }
+
+    .cell-left-details {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .p-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-bottom: 20px;
+        margin: 30px 0px;
+    }
+
+    .p-image img {
+        height: 150px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .cell-container {
+        background-color: #f7f7f7;
+        padding: 50px;
+        margin: 30px 0px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .cell-button {
+        font-size: 1rem;
+        margin: 0px;
+    }
+
+   
 }
