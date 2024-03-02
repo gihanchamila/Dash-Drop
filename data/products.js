@@ -94,7 +94,7 @@ export const products = [
     },
 
     {
-        id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+        id: "8c9c52b5-5a19-4bcb-a5d1-788a74287n53",
         image: "Images/DailyDeals/Dailydeals-Image06.jpeg",
         name: "Haylou S35 ANC Headphones - Activated Noise Cancellation Headphone - Premium Quality",
         rating: {

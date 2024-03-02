@@ -6,12 +6,11 @@
 
 .product-view-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  place-items: center;
-  place-content: center;
-  padding: 0px;
+  justify-content: center;
+  column-gap: 50px;
+  padding-bottom: 110px;
+  padding-top: 80px;
 }
 
 .swiper-container {
@@ -19,6 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 20%;
 }
 
 .product-details {
@@ -26,11 +26,16 @@
   flex-direction: column;
   justify-content: center;
   margin-right: 80px;
+  flex: 80%;
+}
+
+.product-details  h3 {
+  margin: 10px 0px;
+  font-size: 24px;
 }
 
 .product-name {
   margin: 0px;
-  font-size: 16px;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
@@ -40,29 +45,21 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0px;
-
+  margin-bottom: 20px;
 }
 
 .swiper {
-  width: 540px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   align-items: center;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0px;
 }
 
 .swiper-slide img {
-  width: 455px;
+  width: 500px;
   height: 500px;
   object-fit: cover;
-  padding: 0px 0px;
+  
 }
 
  .swiper-button-prev::before,   .swiper-button-prev::after{

@@ -17,26 +17,6 @@ function generateProductDetailsHTML(product) {
             <p class="product-description"> 
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>
-            <h3>Delivery options</h3>
-            <div class="delivery-option-container">
-                <form action="">
-                    <div>
-                        <input type="radio">
-                        <label for="delivery-option" class="delivery-date">Monday, February 12</label>
-                        <label for="delivery-type" class="delivery-type">$4.99 - Shipping</label>
-                    </div>
-                    <div>
-                        <input type="radio">
-                        <label for="delivery-option" class="delivery-date">Monday, February 12</label>
-                        <label for="delivery-type" class="delivery-type">$9.99 - Shipping</label>
-                    </div>
-                    <div>
-                        <input type="radio">
-                        <label for="delivery-option" class="delivery-date">Monday, February 12</label>
-                        <label for="delivery-type" class="delivery-type">$9.99 - Shipping</label>
-                    </div>
-                </form>
-            </div>
             <div>
                 <button class="addToCart-button js-addToCart-button">Add to Cart</button>
             </div> 
