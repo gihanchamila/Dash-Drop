@@ -4,8 +4,6 @@ import { products, getProduct } from "../../data/products.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions, getDeliverOption } from "../../data/deliveryOption.js";
 
-console.log("Hi")
-
 let cartSummaryHTML = "";
 
 cart.forEach((cartItem) => {
@@ -27,14 +25,14 @@ cart.forEach((cartItem) => {
 
     cartSummaryHTML += `
 
-    <div class="product-items-${matchingProduct.id}">
-        <i class="fa-sharp fa-solid fa-xmark"></i>
+    <div class="product-items product-items-${matchingProduct.id}">
+        <i class="fa-sharp fa-solid fa-xmark" data-product-id="${matchingProduct.id}"></i>
         <div class="product-image">
             <img src="${matchingProduct.image}" alt="" class="product-image">
         </div>
         <div class="product-name">
             <h3>${matchingProduct.name}</h3>
-            <div class="product-price">${matchingProduct.price}</div>
+            <div class="product-price">US $${formatCurrency(matchingProduct.priceCents)}</div>
             <div class="product-quantity">
                 <span>Quantity</span>
                 <select>
@@ -75,7 +73,14 @@ cart.forEach((cartItem) => {
 
 
 `
-console.log(cartSummaryHTML)
+console.log(productId)
 });
+
+document.querySelector('.product-container').innerHTML = cartSummaryHTML;
+document.querySelectorAll('.fa-xmark').forEach((link) => link.addEventListener('click', () => {
+    const productId = link.dataset.productId
+    console.log(productId)
+    removeFromCart(productId)
+} ))
 
 
