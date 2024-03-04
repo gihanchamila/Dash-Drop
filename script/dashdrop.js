@@ -22,7 +22,7 @@ products.forEach((product) => {
                     <span class="p-price">$${formatCurrency(product.priceCents)}</span>
                 </div>
                 <label for="p-quantity-content">
-                    <select class="p-quantity" name="p-quantity" id="p-quantity">
+                    <select class="p-quantity js-quantity-selector-${product.id}" name="p-quantity" id="p-quantity">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

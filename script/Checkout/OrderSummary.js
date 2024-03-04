@@ -1,4 +1,4 @@
-import { cart, updateDeliveryOption, removeFromCart, updateCartQuantity } from "../../data/cart.js";
+import { cart, updateDeliveryOption, removeFromCart, updateCartQuantity, countCart, removeAllFromCart, saveToStorage } from "../../data/cart.js";
 import { formatCurrency } from "../utils/money.js";
 import { products, getProduct } from "../../data/products.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
@@ -10,9 +10,9 @@ cart.forEach((cartItem) => {
     const productId = cartItem.productId;
     const matchingProduct = getProduct(productId);
 
-    cartSummaryHTML += `
-
-    <div class="product-items product-items-${matchingProduct.id}">
+    if (matchingProduct) { 
+      cartSummaryHTML += `
+      <div class="product-items product-items-${matchingProduct.id}">
         <i class="fa-sharp fa-solid fa-xmark" data-product-id="${matchingProduct.id}"></i>
         <div class="product-image">
             <img src="${matchingProduct.image}" alt="" class="product-image">
@@ -42,8 +42,14 @@ cart.forEach((cartItem) => {
             ${deliveryOptionsHTML(matchingProduct, cartItem)}
             </form>
         </div>
+        
     </div>
-`
+
+      `;
+  } else {
+      console.error(`Product with ID ${productId} not found.`);
+    
+  }
 });
 
 function deliveryOptionsHTML(matchingProduct, cartItem) {
@@ -85,8 +91,7 @@ document.querySelector('.product-container').innerHTML = cartSummaryHTML;
 document.querySelectorAll('.fa-xmark').forEach((link) => 
 link.addEventListener('click', () => {
     const productId = link.dataset.productId
-    removeFromCart(productId)
-
+    removeFromCart(productId) 
     const container = document.querySelector(
       `.product-items-${productId}`
     );
@@ -94,11 +99,32 @@ link.addEventListener('click', () => {
   } 
 ));
 
-document.querySelectorAll('.delivery-option').forEach((option) => {
+document.querySelectorAll('.delivery-option-container').forEach((option) => {
   option.addEventListener('click', () => {
-    const {productId, deliveryOptionId} = option.dataset
+    const productId = option.dataset.productId; 
+    const deliveryOptionId = option.dataset.deliveryOptionId;
+    console.log(productId);
+    console.log(deliveryOptionId);
     updateDeliveryOption(productId, deliveryOptionId)
   })
 })
 
+let countCartHTML = "";
 
+countCartHTML += `
+<h2 class="cart-quantity">Cart(${countCart()} Items)</h2>
+`
+
+document.querySelector('.cart-quantity-container').innerHTML = countCartHTML
+
+console.log(countCartHTML)
+
+
+
+console.log(cart)
+
+document.querySelector('.empty-cart').addEventListener('click', () => {
+  localStorage.clear()
+  removeAllFromCart()
+  saveToStorage()
+})

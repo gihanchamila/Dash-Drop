@@ -1,4 +1,4 @@
-export let cart = JSON.parse(localStorage.getItem('cart'))
+export let cart = JSON.parse(localStorage.getItem('cart')) || []
 
 if ((!cart)){
      cart = 
@@ -42,6 +42,10 @@ export function saveToStorage(){
     localStorage.setItem('cart', JSON.stringify(cart))
 };
 
+export function countCart(){
+    return cart.length;
+}
+
 export function addToCart(productId) {
     let matchingItem;
 
@@ -63,6 +67,8 @@ export function addToCart(productId) {
     saveToStorage();
 };
 
+
+
 export function removeFromCart(productId){
     const newCart = [];
 
@@ -82,7 +88,6 @@ export function removeAllFromCart() {
     saveToStorage();
 }
 
-
 export function updateDeliveryOption(productId, deliveryOptionId){
     let matchingItem;
     cart.forEach((cartItem) => {
@@ -90,8 +95,12 @@ export function updateDeliveryOption(productId, deliveryOptionId){
             matchingItem = cartItem
         };
     });
-     matchingItem.deliveryOptionId = deliveryOptionId;
-     saveToStorage()
+    if (matchingItem) {
+        matchingItem.deliveryOptionId = deliveryOptionId;
+        saveToStorage();
+    } else {
+        console.error("Matching item not found in the cart.");
+    }
 };
 
 export function updateCartQuantity(){

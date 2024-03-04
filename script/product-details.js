@@ -1,5 +1,6 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
+import { addToCart, updateCartQuantity } from "../data/cart.js";
 
 function generateProductDetailsHTML(product) {
     return `
@@ -18,7 +19,7 @@ function generateProductDetailsHTML(product) {
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>
             <div>
-                <button class="addToCart-button js-addToCart-button">Add to Cart</button>
+                <button class="addToCart-button js-addToCart-button" data-product-id="${product.id}">Add to Cart</button>
             </div> 
         </div>  
     `;
@@ -41,4 +42,13 @@ if (matchingProduct) {
     const productDetailsContainer = document.getElementById('productDetailsContainer');
     productDetailsContainer.innerHTML = generateProductDetailsHTML(matchingProduct);
 }
+
+document.querySelectorAll('.js-addToCart-button').forEach((button) => {
+    button.addEventListener('click', ()  => {
+        const productId = button.dataset.productId;
+        addToCart(productId);
+        console.log(productId)
+        updateCartQuantity();
+    });
+});
 
