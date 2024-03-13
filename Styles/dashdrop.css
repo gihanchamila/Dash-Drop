@@ -109,6 +109,11 @@ body {
     margin: 10px 15px;
     background-color: white;
 }
+
+.show-more-button a {
+    display: initial;
+    color: black;
+}
 /* luxury*/
 
 .cell-container {
@@ -201,6 +206,13 @@ select option{
     border: 1px solid black;
     margin: 0px 6px;
     background-color: white;
+}
+
+.cart-button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.8s;
+    cursor: pointer;
 }
 
 .fa-check {

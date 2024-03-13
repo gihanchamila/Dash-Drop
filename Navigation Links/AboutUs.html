@@ -24,7 +24,7 @@
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
-        <header>
+        <header class="hidden">
             <div class="nav-logo-image">
                 <a href="../Dashdrop.html"><img src="../Images/favicon/favicon2.png" alt="Logo"></a>
             </div>
@@ -41,8 +41,8 @@
                 </ul>
             </nav>
             <div class="nav-buttons">
-                <button class="nav-signin-button">Sign in</button>
-                <button class="nav-signup-button">Sign up</button>
+                <button class="nav-signin-button sign-button">Sign in</button>
+                <button class="nav-signup-button sign-button">Sign up</button>
             </div>
             <div class="Profile-icon">
                 <i class="fa-solid fa-user"></i>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <section>
+        <section class="hidden">
             <div class="section-container first-section">
                 <div class="first-section-title">We connect people and build communities to create economic opportunity for all.</div>
                 <div class="first-section-paragraph">
@@ -66,15 +66,48 @@
                     At Dashdrop, we forge pathways to link millions of sellers and buyers across over 190 markets globally. Our innovative technology emboldens our clientele, affording each individual the chance to prosper and flourish, irrespective of their background or geographical location. The far-reaching impact of our endeavors generates transformative waves of change, benefiting our customers, our organization, our communities, and our planet at large.
                     </p>
                 </div>
-                <div>
-                    
+            </div>
+        </section>
+        <section class="hidden">
+            <div class="section-container second-section hidden">
+                <div class="second-section-left card">
+                    <div class="card-image">
+                        <img class="second-section-img" src="/Images/About Us/Seller.jpg" alt="">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-title">For sellers</div>
+                        <span>Expand your customer base and elevate your business with ease.</span>
+                        <p>At Dashdrop, we provide sellers the opportunity to expand their ventures with minimal barriers to entry, irrespective of their scale, history, or location. Our commitment lies in empowering our sellers, not competing against them. Our success is intertwined with the success of our sellers, ensuring mutual growth and prosperity.
+                        </p>
+                    </div>
+                </div>
+                <div class="second-section-right card">
+                    <div class="card-image">
+                        <img class="second-section-img" src="/Images/About Us/Buyer.jpg" alt="">
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-title">For buyes</div>
+                        <span>Discover a world of diverse inventory and exclusive offerings</span>
+                        <p>Shoppers browsing through the Dashdrop marketplace, whether on our website or mobile apps, are treated to an exceptionally tailored experience, featuring an unmatched array of products at unbeatable prices.
+                        </p>
+                    </div>   
                 </div>
             </div>
-            
+        </section>
+
+        <section class="hidden">
+            <div class="section-container third-section">
+                <div class="third-section-title">Awards & Recognition</div>
+                <div class="third-section-paragraph">
+                    <p>
+                        From creating a workplace environment where employees can be their authentic selves, to being a responsible business with a commitment to the community – we're breaking down barriers and helping to foster opportunity for all.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Footer Section -->
-        <footer>
+        <footer class="hidden">
             <div class="footer-column">
                 <h4>Buy</h4>
                 <div class="footer-row">
@@ -138,5 +171,21 @@
         <script>var swiper = new Swiper(".mySwiper", {});</script>
 
         <script type="module" src="dashdrop.js"></script>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                };
+                });
+            });
+
+            const hiddenElement =document.querySelectorAll('.hidden')
+            hiddenElement.forEach((el) => {
+                observer.observe(el)
+            });
+        </script>
     </body>
 </html>

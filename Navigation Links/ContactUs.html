@@ -24,7 +24,7 @@
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
-        <header>
+        <header class="hidden">
             <div class="nav-logo-image">
                 <a href="../Dashdrop.html"><img src="../Images/favicon/favicon2.png" alt="Logo"></a>
             </div>
@@ -41,8 +41,8 @@
                 </ul>
             </nav>
             <div class="nav-buttons">
-                <button class="nav-signin-button">Sign in</button>
-                <button class="nav-signup-button">Sign up</button>
+                <button class="nav-signin-button sign-button">Sign in</button>
+                <button class="nav-signup-button sign-button">Sign up</button>
             </div>
             <div class="Profile-icon">
                 <i class="fa-solid fa-user"></i>
@@ -51,14 +51,14 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </header>      
-        <div class="search-bar-container">
+        <div class="search-bar-container hidden">
             <div class="search-bar">
                 <input type="text" name="search-bar" id="search-bar" placeholder="Search for anything">
                 <button class="all-catagory-button">All Catagories</i></button>              
             </div>
         </div>
 
-        <section class="contactUs-section">
+        <section class="contactUs-section hidden">
             <div class="contactUs-container container">
                 <div class="cu-left">
                     <div class="contactUs-title cu-title">Customer Support</div>
@@ -73,7 +73,7 @@
             </div>
         </section>
 
-        <section class="businessInquiries-section">
+        <section class="businessInquiries-section hidden">
             <div class="businessInquiries-container container">
                     <div class="businessInquiries-title cu-title">Business Inquiries</div>
                     <p>If you are a supplier, potential partner, or have business-related questions, please contact our business development team.</p>
@@ -81,7 +81,7 @@
             </div>
         </section>
 
-        <section class="headquarters-section">
+        <section class="headquarters-section hidden">
             <div class="headquarters-container container">
                     <div class="headquarters-title cu-title">Headquarters</div>
                     <p>Visit our headquarters or send us mail:</p>
@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <section class="feedback-section">
+        <section class="feedback-section hidden">
             <div class="feedback-container container">
                     <div class="feedback-title cu-title">Feedback and Suggestions</div>
                     <p>We value your feedback! If you have any suggestions, comments, or ideas to improve Dash Drop, please let us know.</p>
@@ -106,7 +106,7 @@
         </section>
 
         <!-- Footer Section -->
-        <footer>
+        <footer class="hidden">
             <div class="footer-column">
                 <h4>Buy</h4>
                 <div class="footer-row">
@@ -170,5 +170,21 @@
         <script>var swiper = new Swiper(".mySwiper", {});</script>
 
         <script type="module" src="dashdrop.js"></script>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                };
+                });
+            });
+
+            const hiddenElement =document.querySelectorAll('.hidden')
+            hiddenElement.forEach((el) => {
+                observer.observe(el)
+            });
+        </script>
     </body>
 </html>

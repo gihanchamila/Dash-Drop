@@ -1,4 +1,16 @@
-.first-section {
+
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+.first-section, .third-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +19,49 @@
     padding: 100px 0px;
 }
 
-.first-section-title {
+.first-section-title, .third-section-title {
     font-size: 2.5rem;
     font-weight: 700;
+}
+
+.second-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-bottom:50px ;
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 200px; /* Make the cards flex to occupy equal space */
+    margin: 0 5px; /* Add some margin between the cards */
+    padding: 50px 50px 30px 50px;
+    background-color: #f7f7f7;
+    height: 525px;
+
+}
+
+.second-section-left, .second-section-right {
+    width: 45%;
+}
+
+.card-image {
+    object-fit: cover;
+}
+
+.second-section-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-details {
+    padding: 20px 0px;
+}
+
+.card-details-title {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
 }

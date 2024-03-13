@@ -1,6 +1,15 @@
 body {
     margin: 0;
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
 .container {
     font-size: 1rem;
     padding: 100px 100px;
