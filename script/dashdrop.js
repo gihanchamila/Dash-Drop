@@ -1,7 +1,8 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { category } from "../data/category.js";
-import { addToCart, cart, updateCartQuantity } from "../data/cart.js";
+import { addToCart, cart, removeAllFromCart, updateCartQuantity } from "../data/cart.js";
+import { renderOrderSummary } from "./Checkout/OrderSummary.js";
 
 // Generate HTML for products
 let productsHTML = "";
@@ -20,10 +21,14 @@ products.forEach((product) => {
                 <div class="p-text">
                     <div class="p-name">${product.name}</div>
                     <span class="p-price">$${formatCurrency(product.priceCents)}</span>
+                    <div class="added-to-cart js-added-to-cart-${product.id}">
+                        <i class="fa-solid fa-check"></i>
+                        Added
+                    </div>
                 </div>
                 <label for="p-quantity-content">
-                    <select class="p-quantity js-quantity-selector-${product.id}" name="p-quantity" id="p-quantity">
-                        <option value="1">1</option>
+                    <select class="js-quantity-selector-${product.id} p-quantity">
+                        <option selected value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -35,11 +40,14 @@ products.forEach((product) => {
                         <option value="10">10</option>
                     </select>
                 </label>
+                
                 <button class="cart-button js-cart-button" data-product-id="${product.id}">Add to Cart</button>
             </div>
+            
         </div>
     `
 });
+
 
 document.querySelector(".p-container").innerHTML = productsHTML;
     
@@ -86,9 +94,10 @@ hiddenElement.forEach((el) => {
 
 document.querySelectorAll('.js-cart-button').forEach((button) => {
     button.addEventListener('click', ()  => {
-        const productId = button.dataset.productId;
+        const {productId} = button.dataset;
         addToCart(productId);
         updateCartQuantity();
+        renderOrderSummary()
     });
 });
 
@@ -116,5 +125,4 @@ document.querySelector(".nav-signup-button").addEventListener('click', () => {
     const signUpHTML = "./SignUp.html"
     window.open(signUpHTML, "_blank")
 })
-
 console.log(cart)

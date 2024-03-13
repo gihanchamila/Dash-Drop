@@ -56,12 +56,49 @@ body {
 }
 
 .product-name  h3 {
-    margin-bottom: 28px;
-    max-width: 200px;
-    max-height: 6em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     overflow: hidden;
-    margin-top: 0px;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -moz-line-clamp: 3; 
+    margin-top: 0;
 
+}
+
+.product-quantity-span {
+
+}
+
+.quantity-input {
+    width: 30px;
+    height: 10px;
+    display: none;
+}
+
+.save-quantity-link {
+    display: none;
+}
+
+.is-editing-quantity .quantity-input {
+    display: initial;
+}
+
+.is-editing-quantity .save-quantity-link {
+    display: initial;
+}
+
+.is-editing-quantity .quantity-label {
+    display: none;
+}
+  
+.is-editing-quantity .update-quantity-link {
+    display: none;
 }
 
 .delivery-option-name {
@@ -102,8 +139,8 @@ body {
     align-self: center;
 }
 
-.product-quantity select{
-    border: 1px solid black;
+.product-quantity span{
+    font-size: 1rem;
 }
 
 .line {
@@ -192,8 +229,12 @@ body {
         text-align: left;
     }
 
-    .delivery-option, .product-price, .product-quantity span {
+    .delivery-option, .product-price{
         font-size: 0.9rem;
+    }
+
+    .quantity-container-span {
+        font-size: 10px;
     }
 
     .delivery-option-name {
@@ -214,9 +255,9 @@ body {
     }
 
     .product-name h3 {
-        margin-bottom: 10px; /* Reduce margin */
         max-width: 500px;
         font-size: 18.72px;
+        margin: 0;
     }
 
     .quantity-input {

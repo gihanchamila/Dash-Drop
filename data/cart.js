@@ -2,39 +2,7 @@ export let cart = JSON.parse(localStorage.getItem('cart')) || []
 
 if ((!cart)){
      cart = 
-    [/*{
-        id:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-        image:"Images/DailyDeals/Dailydeals-Image01.jpg",
-        name:"TITAN Black Dial Analog Watch for Men - Gents",
-        rating: {
-        stars: 4.5,
-        count: 87
-        },
-        category:"fashionCategory",
-        priceCents: 10900,
-        keywords: [
-        "watch",
-        "analog watch",
-        "TITAN" ]
-    },
-
-    {   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-        image: "Images/DailyDeals/Dailydeals-Image02.png",
-        name: "ASUS Vivobook 15 (X1504) 13th gen",
-        rating: {
-        stars: 4.5,
-        count: 56
-        },
-        category:"computersCategory",
-        priceCents: 103000,
-        keywords: [
-        "Asus",
-        "Vivobook 15",
-        "13th gen"
-        ],
-        type: "Laptop",
-
-    }*/]
+    []
 };
 
 
@@ -46,28 +14,62 @@ export function countCart(){
     return cart.length;
 }
 
+
+
 export function addToCart(productId) {
     let matchingItem;
+    const addedMessageTimeouts = {};
 
     cart.forEach((cartItem) => {
-        if(productId === cartItem.productId){
-            matchingItem = cartItem
-        };
+        if (productId === cartItem.productId) {
+            matchingItem = cartItem;
+        }
     });
 
-    if (matchingItem){
-        matchingItem.quantity += 1
+    const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+    const quantity = Number(quantitySelector.value);
+
+    const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+    addedMessage.classList.add('added-to-cart-visible');
+
+    const previousTimeoutId = addedMessageTimeouts[productId];
+ 
+    if (previousTimeoutId) {
+        clearTimeout(previousTimeoutId);
+    }
+
+    const timeoutId = setTimeout(() => {
+        addedMessage.classList.remove('added-to-cart-visible');
+    }, 2000);
+
+    addedMessageTimeouts[productId] = timeoutId;
+
+    if (matchingItem) {
+        matchingItem.quantity += quantity;
     } else {
-        cart.push ({
-            productId: productId,
-            quantity:1,
+        cart.push({
+            productId,
+            quantity,
             deliveryOptionId: "1"
-        })
-    };
+        });
+    }
+    updateCartQuantity();
     saveToStorage();
-};
+}
 
-
+export function updateQuantity(productId, newQuantity) {
+    let matchingItem;
+  
+    cart.forEach((cartItem) => {
+      if (productId === cartItem.productId) {
+        matchingItem = cartItem;
+      }
+    });
+  
+    matchingItem.quantity = newQuantity;
+  
+    saveToStorage();
+}
 
 export function removeFromCart(productId){
     const newCart = [];
@@ -84,8 +86,9 @@ export function removeFromCart(productId){
 
 export function removeAllFromCart() {
     const newCart = [];
-    cart = newCart; // Emptying the cart array
+    cart = newCart;
     saveToStorage();
+    updateCartQuantity()
 }
 
 export function updateDeliveryOption(productId, deliveryOptionId){
@@ -109,4 +112,7 @@ export function updateCartQuantity(){
     cart.forEach((cartItem) => {
         cartQuantity += cartItem.quantity
     });
+    return cartQuantity
 };
+updateCartQuantity()
+
