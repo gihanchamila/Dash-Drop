@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+.fa-bars, .dropdown-menu {
+    display: none;
+}
+
 header {
     display: flex;
     justify-content:center;
@@ -12,6 +16,7 @@ header {
 
 header i {
     padding: 0px 5px 0px 20px;
+
 }
 
 .logo-text a {
@@ -116,12 +121,84 @@ nav a {
 @media screen and (max-width: 768px){
     body {
         font-family:'Poppins', sans-serif;
-        padding: 0px 50px;
+        padding: 10px 50px 0px 50px;
     }
 
-    
+    section.menu-open {
+        overflow: hidden;
+    }
+
+    .fa-bars {
+        display: block;
+        float: right;
+    }
+
+    .dropdown-menu {
+        display: block;
+        margin-top: 25px;
+    }
+
+    .nav-logo-image {
+        margin-right: 220px;
+    }
+
+    .nav-back {
+        padding-top: 25px;
+        font-size: 0.8rem;
+        font-weight: 300px;
+    }
+
+    .dropdown-menu-nav {
+        background-color: #f7f7f7;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+
+    }
+
+    .fa-arrow-left {
+        padding-right: 10px;
+    }
+
+    .back-button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: solid black 1px;
+    }
+
+    .dropdown-menu-nav.active {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-menu-nav ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
     header {
-        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    header nav, .nav-buttons,  .logo-text  {
+        display: none;
     }
 
     .search-bar input {
@@ -132,7 +209,6 @@ nav a {
         width: 260px;
         outline: none;
         margin-right: 20px;
-    
     }
 
     .search-bar button {

@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dash Drop</title>
 
-        <link rel="stylesheet" href="Styles/signIn.css">
-        <link rel="stylesheet" href="Styles/navbar.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <link rel="icon" href="Images/favicon/favicon2.png">
+        <link rel="stylesheet" href="../Styles/signIn.css">
+        <link rel="stylesheet" href="../Styles/navbar.css">
+        <link rel="stylesheet" href="../Styles/footer.css">
+        <link rel="icon" href="../Images/favicon/favicon.png">
 
         <!-- Importing fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,17 +21,17 @@
     <body>
         <header class="">
             <div class="nav-logo-image">
-                <a href="Dashdrop.html"><img src="Images/favicon/favicon2.png" alt="Logo"></a>
+                <a href="../Dashdrop.html"><img src="../Images/favicon/favicon2.png" alt="Logo"></a>
             </div>
             <div class="logo-text">
-                <a href="Dashdrop.html"><img src="Images/favicon/logo-text.png" alt="Logo-text"></a>
+                <a href="../Dashdrop.html"><img src="../Images/favicon/logo-text.png" alt="Logo-text"></a>
             </div>
             <nav>
                 <ul>           
-                    <li><a href="Dashdrop.html">Home</a></li>
-                    <li><a href="Navigation Links/Become a seller.html">Become a seller</a></li>
-                    <li><a href="Navigation Links/AboutUs.html">About Us</a></li>
-                    <li><a href="Navigation Links/ContactUs.html">Contact Us</a></li>       
+                    <li><a href="../Dashdrop.html">Home</a></li>
+                    <li><a href="./Become a seller.html">Become a seller</a></li>
+                    <li><a href="./AboutUs.html">About Us</a></li>
+                    <li><a href="./ContactUs.html">Contact Us</a></li>       
                 </ul>
             </nav>
             <div class="nav-buttons" class="hidden">
@@ -44,7 +44,20 @@
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
-        </header>      
+        </header>   
+        <div class="dropdown-menu">
+            <nav class="dropdown-menu-nav">
+                <ul>           
+                    <li><a href="../Dashdrop.html">Home</a></li>
+                    <li><a href="Navigation Links/Become a seller.html">Become a seller</a></li>
+                    <li><a href="Navigation Links/AboutUs.html">About Us</a></li>
+                    <li><a href="Navigation Links/ContactUs.html">Contact Us</a></li>  
+                    <li><a href="SignIn.html" class="sign-in-pagesign-in-page">Sign In</a></li>
+                    <li><a href="SignUp.html" class="sign-up-page">Sign Up</a></li> 
+                    <li><a href="Dashdrop.html" class="nav-back"><button class="back-button"><i class="fa-solid fa-arrow-left"></i>Back</button></a></li> 
+                </ul>
+            </nav>
+        </div>   
         <div class="search-bar-container ">
             <div class="search-bar">
                 <input type="text" name="search-bar" id="search-bar" placeholder="Search for anything">
@@ -70,7 +83,7 @@
                 <div>
                 <button class="autoauthentication">
                     <a href="">
-                        <img src="Images/SignIn/Google.svg" alt="" class="autoauthentication-image">
+                        <img src="../Images/SignIn/Google.svg" alt="" class="autoauthentication-image">
                         <div>Continue with Google</div>
                     </a>
                 </button>
@@ -78,7 +91,7 @@
             <div>
                 <button class="autoauthentication">
                     <a href="">
-                        <img src="Images/SignIn/Microsoft.svg" alt="" class="autoauthentication-image">
+                        <img src="../Images/SignIn/Microsoft.svg" alt="" class="autoauthentication-image">
                         <div>Continue with Microsoft</div>
                     </a>
                 </button>
@@ -86,7 +99,7 @@
             <div>
                 <button class="autoauthentication">
                     <a href="">
-                        <img src="Images/SignIn/Apple.svg" alt="" class="autoauthentication-image">
+                        <img src="../Images/SignIn/Apple.svg" alt="" class="autoauthentication-image">
                         <div>Continue with Apple</div>
                     </a>
                 </button>

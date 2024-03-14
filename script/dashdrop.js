@@ -113,16 +113,26 @@ document.querySelectorAll('.hover-image').forEach(image => { // Step 4
 document.querySelector(".fa-cart-shopping").addEventListener('click', (event) => {
     const checkoutHTML = "./Checkout.html"
     window.open(checkoutHTML, "_blank")
-    alert("Fuck")
 })
 
 document.querySelector(".nav-signin-button").addEventListener('click', (event) => {
-    const signInHTML = "./Signin.html"
+    const signInHTML = "./Navigation Links/Signin.html"
     window.open(signInHTML, "_blank")
 });
 
 document.querySelector(".nav-signup-button").addEventListener('click', () => {
-    const signUpHTML = "./SignUp.html"
+    const signUpHTML = ".././Navigation Links/SignUp.html"
     window.open(signUpHTML, "_blank")
 })
-console.log(cart)
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.dropdown-menu-nav');
+    const section = document.querySelectorAll('section');
+
+    menuIcon.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        section.classList.toggle('menu-open');
+
+    });
+});

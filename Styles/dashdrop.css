@@ -27,8 +27,8 @@ body {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 250px;
     object-fit: cover;  
+    padding: 20px 0px 0px 0px;
 }
 
 /* observer-animation */
@@ -239,13 +239,6 @@ select option{
 
 /* For Mobile Devices */
 @media (max-width: 768px) {
-    body {
-    }
-
-    .swiper-slide img {
-        height: 200px;
-    }
-
     .popular-slider ul {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;

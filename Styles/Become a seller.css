@@ -2,6 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-size: 1rem;
+    padding: 0px 100px;
 }
 
 .bsd-container {    
@@ -10,7 +11,7 @@ body {
     justify-content: center;
     padding-bottom: 100px;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
     box-sizing: border-box;
     padding: 0px 100px;
 }
@@ -31,7 +32,6 @@ body {
     background-color: #000000;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-top: 20px;
@@ -44,7 +44,6 @@ body {
 }
 .wsd-container {
     background-color: #f7f7f7;
-    border-radius: 8px;
     overflow: hidden;
     padding:100px 100px ;
 }

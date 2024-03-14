@@ -40,7 +40,7 @@
     margin: 0 5px; /* Add some margin between the cards */
     padding: 50px 50px 30px 50px;
     background-color: #f7f7f7;
-    height: 525px;
+    height: 600px;
 
 }
 
@@ -61,7 +61,20 @@
     padding: 20px 0px;
 }
 
+.card-details span {
+    font-weight: 400;
+}
+
+.card-details div {
+    font-weight: 500;
+}
+
+.card-details p {
+    font-weight: 300;
+}
+
 .card-details-title {
     font-size: 1.2rem;
     padding-bottom: 10px;
+    font-weight: 500;
 }
