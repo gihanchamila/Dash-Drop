@@ -28,7 +28,7 @@ body {
     display: block;
     width: 100%;
     object-fit: cover;  
-    padding: 20px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 /* observer-animation */
@@ -47,6 +47,7 @@ body {
         transition: none;
     }
 }
+
 
 /* Popular catagory */
 
@@ -114,6 +115,7 @@ body {
     display: initial;
     color: black;
 }
+
 /* luxury*/
 
 .cell-container {
@@ -239,6 +241,12 @@ select option{
 
 /* For Mobile Devices */
 @media (max-width: 768px) {
+
+    .menu-icon {
+        display : block
+        margin-right: 0px; /* Adjust as needed */
+    }
+
     .popular-slider ul {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -260,6 +268,12 @@ select option{
     .cell-left-details {
         width: 100%;
         max-width: 600px;
+    }
+
+
+
+    .fa-bars {
+        padding : 0;
     }
 
     .p-container {

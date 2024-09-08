@@ -38,12 +38,13 @@
                 <button class="nav-signin-button sign-button">Sign in</button>
                 <button class="nav-signup-button sign-button">Sign up</button>
             </div>
-            <div class="Profile-icon">
-                <i class="fa-solid fa-user"></i>
-            </div>
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hidden-menu"></div>
         </header>   
         <div class="dropdown-menu">
             <nav class="dropdown-menu-nav">
@@ -65,6 +66,7 @@
                 <div class="dropdown-content">dropdown</div>
             </div>
         </div>
+        <div class="signin-container">
             <div class="create-account-container">
                 <h2>Sign In</h2>
                 <div class="account-signin" id="email-field">
@@ -78,8 +80,9 @@
                         <i class="fas fa-eye-slash toggle-password" id="toggle-password"></i>
                     </div>
                 </div>
-                <button class="submit-button" id="continue-button">SIGN IN</button>
-                <span>Don't you have an account? Sign Up</span>
+                <button class="submit-button" id="continue-button">Sign In</button>
+                <span>Don't you have an account? <span class="signup-lable">Sign Up</span></span>
+            <!--
                 <div>
                 <button class="autoauthentication">
                     <a href="">
@@ -104,64 +107,11 @@
                     </a>
                 </button>
             </div>
+            -->
+            
         </div>
-        
-        <footer class="">
-            <div class="footer-column">
-                <h4>Buy</h4>
-                <div class="footer-row">
-                    <a href="#">Sell</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#">Dashdrop Money Back Guarantee</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#">Stores</a>
-                </div>
-            </div>
-        
-            <div class="footer-column">
-                <h4>About Dashdrop</h4>
-                <div class="footer-row">
-                   <a href="#">Company info </a>
-                </div>
-                <div class="footer-row">
-                    <a href="#">News</a>
-                </div>
-            </div>
-        
-            <div class="footer-column">
-                <h4>Help & Contact</h4>
-                <div class="footer-row">
-                    <a href="#">Seller Information Center</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#">Contact us</a>
-                </div>
-            </div>
-        
-            <div class="footer-column">
-                <h4>Community</h4>
-                <div class="footer-row">
-                    <a href="#">Announcements</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#">Discussion boards</a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h4>Stay connected</h4>
-                <div class="footer-row">
-                    <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
-                </div>
-                <div class="footer-row">
-                    <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                </div>
-            </div>
-        </footer>
+        </div>
+            
         <script>
                     document.addEventListener("DOMContentLoaded", function () {
                     const togglePassword = document.getElementById("toggle-password");
@@ -211,6 +161,11 @@
                     window.open(signUpHTML, "_self")
                 })
 
+
+                document.querySelector('.signup-lable').addEventListener('click', () => {
+                    const signUpHTML = "SignUp.html"
+                    window.open(signUpHTML, "_self")
+                })
 
         </script>
     </body>

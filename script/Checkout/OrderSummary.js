@@ -92,6 +92,8 @@ export function renderOrderSummary(){
         `.product-items-${productId}`
       );
       container.remove();
+      renderPaymentSummary()
+      renderOrderSummary()
     } 
   ));
   
@@ -108,6 +110,8 @@ export function renderOrderSummary(){
   document.querySelector('.empty-cart').addEventListener('click', () => {
     localStorage.clear()
     removeAllFromCart()
+    renderPaymentSummary()
+    renderOrderSummary()
     saveToStorage()
   })
   

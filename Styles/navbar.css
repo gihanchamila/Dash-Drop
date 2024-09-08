@@ -1,22 +1,28 @@
 body {
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 0px 100px;
     margin: 0;
 }
 
-.fa-bars, .dropdown-menu {
-    display: none;
+@media (min-width: 769px) { 
+    .menu-icon {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
 }
 
 header {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
+    
 }
 
 header i {
     padding: 0px 5px 0px 20px;
-
 }
 
 .logo-text a {
@@ -24,7 +30,7 @@ header i {
     margin: 0px;
 }
 
-.nav-logo-image a{
+.nav-logo-image a {
     padding: 0px;
     margin: 0px;
 }
@@ -35,7 +41,7 @@ header i {
 
 nav {
     flex-grow: 1;
-    margin-left: 30px;
+    margin-left: px;
 }
 
 nav ul {
@@ -43,6 +49,11 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin : 20px 235px;
+    background-color : #f7f7f7;
+    padding : 0px;
+    border-radius : 50px
+
 }
 
 nav a {
@@ -50,38 +61,61 @@ nav a {
     color: rgb(0, 0, 0);
     display: block;
     text-align: center;
-    padding:10px 12px;
-    margin-right: 8px;
+    padding: 10px 12px;
 }
 
-.nav-buttons button {
+nav a:hover {
+
+}
+
+.nav-signin-button{
     padding: 6px 12px;
     border: 1px solid black;
     margin: 0px 6px;
     background-color: white;
 }
 
-.sign-button:hover{
+.nav-signup-button {
+    padding: 6px 12px;
     background-color: black;
+    border: 1px solid black;
     color: white;
+    transition: 0.8s;
+}
+
+.nav-signup-button:hover {
+    background-color: white;
+    color : black
+}
+
+.nav-signin-button:hover {
+    background-color: white;
+    color: black;
     transition: 0.8s;
 }
 
 .fa-cart-shopping {
     max-height: 40px;
+    margin-left : 10px;
+    padding : 10px
+}
+
+.fa-cart-shopping:hover {
+    background-color : #f7f7f7;
+    padding : 10px;
+    border-radius : 20px;
+    
 }
 
 .search-bar-container {
     display: flex;
-    margin-right: 36px;
-    justify-content: center;
+    margin-left: 438px;
 }
 
-.logo-text img{
+.logo-text img {
     height: 25px;
     padding-left: 25px;
 }
-
 
 .search-bar button {
     padding: 6px 14px;
@@ -99,10 +133,9 @@ nav a {
     width: 295px;
     outline: none;
     margin-right: 8px;
-
 }
 
-.cart-item i img{
+.cart-item i img {
     height: 15px;
     width: 15px;
     padding-left: 10px;
@@ -118,24 +151,50 @@ nav a {
     display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     body {
-        font-family:'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
         padding: 10px 50px 0px 50px;
     }
+
+    .menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+    
+    .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown-menu.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+    
+    .dropdown-menu-nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
 
     section.menu-open {
         overflow: hidden;
     }
 
-    .fa-bars {
-        display: block;
-        float: right;
-    }
-
-    .dropdown-menu {
-        display: block;
-        margin-top: 25px;
+    .fa-cart-shopping {
+        margin-left : 70px;
+        padding : 0
     }
 
     .nav-logo-image {
@@ -146,22 +205,6 @@ nav a {
         padding-top: 25px;
         font-size: 0.8rem;
         font-weight: 300px;
-    }
-
-    .dropdown-menu-nav {
-        background-color: #f7f7f7;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1000;
-
     }
 
     .fa-arrow-left {
@@ -175,20 +218,6 @@ nav a {
         border: solid black 1px;
     }
 
-    .dropdown-menu-nav.active {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    .dropdown-menu-nav ul{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 0px;
-        margin: 0px;
-    }
-
     header {
         display: flex;
         align-items: center;
@@ -197,8 +226,12 @@ nav a {
         padding: 0px;
     }
     
-    header nav, .nav-buttons,  .logo-text  {
+    header nav, .nav-buttons, .logo-text {
         display: none;
+    }
+
+    .search-bar-container {
+        display: flex;
     }
 
     .search-bar input {
@@ -206,7 +239,7 @@ nav a {
         padding: 6px 12px;
         border: 1px solid black;
         background-color: white;
-        width: 260px;
+        width:250px;
         outline: none;
         margin-right: 20px;
     }
@@ -218,4 +251,6 @@ nav a {
         margin: -38px;
         border-left: none;
     }
+
+    
 }

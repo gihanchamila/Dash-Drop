@@ -11,9 +11,17 @@ body {
     justify-content: center;
     padding-bottom: 100px;
     flex-direction: column;
-    height: 80vh;
     box-sizing: border-box;
+    height : 80vh;
     padding: 0px 100px;
+    background-image : url("../Images/Become a seller/main.png");
+    background-size : cover;
+    margin-bottom : 100px;
+
+}
+
+.bsd-image {
+    width : 100px
 }
 
 .bsd-title, .wsd-title, .hgs-header, .ss-content-title, .rjd-content-title {
@@ -23,8 +31,14 @@ body {
     margin: 0px;
 }
 
+.bsd-title {
+    color : white;
+}
+
 .bsd-paragraph {
     text-align: center;
+    color : white;
+    font-weight : 300;
 }
 
 .bsd-signup,.ss-button, .bas-button {
@@ -72,6 +86,16 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+.signup-button {
+    background-color : white;
+    color : black ;
+    margin-top : 35px;
+    padding : 10px 20px;
+    border : none;
+    font-size : 16px ;
+    border-radius : 20px;
 }
 
 .button:hover {
@@ -176,4 +200,98 @@ body {
 
 .fa-arrow-up-right-from-square {
     padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0px 20px; 
+    }
+
+    .bsd-container {
+        padding-bottom: 50px; 
+        height: auto; 
+        text-align : left
+    }
+    
+    .bsd-title, .wsd-title, .hgs-header, .ss-content-title, .rjd-content-title {
+        font-size: 1.8rem; 
+        padding-bottom: 15px;
+    }
+
+    .bsd-paragraph {
+        font-size: 0.9rem; 
+        margin: 10px 0; 
+        text-align : left;
+    }
+    
+    .bsd-signup, .ss-button, .bas-button {
+        padding: 8px 15px; 
+        font-size: 0.9rem; 
+        margin-top: 15px; 
+    }
+
+    .signup-button {
+        background-color : white;
+        color : black ;
+        margin-top : 35px;
+        padding : 10px 20px;
+        border : none;
+        font-size : 16px ;
+    }
+
+    .bsd-container {    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 100px;
+        flex-direction: column;
+        box-sizing: border-box;
+        height : 80vh;
+        padding: 0px 100px;
+        background-image : url("../Images/Become a seller/main.png");
+        background-size : cover;
+        margin-bottom : 100px;
+        text-align : left
+    }
+    
+    
+    .wsd-container {
+        padding: 50px 20px; 
+    }
+
+    .feature h3 {
+        font-size: 1.2rem; 
+    }
+
+    .hgs-container {
+        margin: 30px auto; 
+        padding: 0px 20px; 
+    }
+    
+    .hgs-content {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+
+    .ss-container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 50px 20px; 
+        gap: 50px; 
+    }
+
+    .ss-container img {
+        display : none
+    }
+
+    .ss-left {
+        flex: unset; 
+        text-align: center; 
+    
+    }
+
+    .rjd-container, .rjd-p {
+        padding: 50px 20px;
+        font-size: 0.8rem; 
+    }
 }

@@ -1,14 +1,28 @@
-
-
 .hidden {
     opacity: 0;
     transition: all 1s;
+}
+
+p {
+    font-weight : 300;
 }
 
 .show {
     opacity: 1;
 }
 
+.signin-button {
+    color : black;
+}
+
+.signup-button {
+ color : white
+}
+
+.signup-button a {
+    text-decoration : none;
+    color : white
+}
 
 .first-section, .third-section {
     display: flex;
@@ -16,7 +30,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 100px 0px;
+    height : 100vh;
 }
 
 .first-section-title, .third-section-title {
@@ -36,12 +50,11 @@
 .card {
     display: flex;
     flex-direction: column;
-    flex: 200px; /* Make the cards flex to occupy equal space */
-    margin: 0 5px; /* Add some margin between the cards */
+    flex: 200px; 
+    margin: 0 5px; 
     padding: 50px 50px 30px 50px;
     background-color: #f7f7f7;
     height: 600px;
-
 }
 
 .second-section-left, .second-section-right {
@@ -78,3 +91,16 @@
     padding-bottom: 10px;
     font-weight: 500;
 }
+
+
+@media (max-width: 768px) {
+    .second-section {
+        display : flex;
+        flex-direction : column;
+        width : 100%;
+    }
+
+    .second-section-left, .second-section-right {
+        width: 70%;
+    }
+ }

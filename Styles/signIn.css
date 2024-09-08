@@ -2,12 +2,19 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+    text-transform: none;
+}
+
 .create-account-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 150px;
+    background-color : #f7f7f7;
+    width : 325px;
+    padding : 25px
 }
 
 .create-account-container span {
@@ -17,6 +24,7 @@
 
 .create-account-container h2 {
     font-size: 1.72rem;
+    text-align : left;
 }
 
 .account-signin {
@@ -29,6 +37,10 @@
 .account-signin label {
     align-self: flex-start;
     font-size: 0.8rem;
+}
+
+.account-signin label : hover {
+    text-decoration : underline;
 }
 
 .account-signin input{
@@ -46,6 +58,7 @@
     background-color: black;
     color: white;
     font-weight: 700;
+    margin-top : 10px
 }
 
 .autoauthentication {
@@ -124,10 +137,6 @@
 }
 
 @media screen and (min-width: 769px) {
-    .create-account-container {
-        padding-bottom: 150px;
-    }
-    
     .create-account-container h2 {
         font-size: 1.72rem;
     }

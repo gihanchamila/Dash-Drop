@@ -125,14 +125,10 @@ document.querySelector(".nav-signup-button").addEventListener('click', () => {
     window.open(signUpHTML, "_blank")
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menu-icon');
-    const navMenu = document.querySelector('.dropdown-menu-nav');
-    const section = document.querySelectorAll('section');
+const menuIcon = document.querySelector('.menu-icon');
+const hiddenMenu = document.querySelector('.dropdown-menu');
 
-    menuIcon.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        section.classList.toggle('menu-open');
-
-    });
+menuIcon.addEventListener('click', () => {
+    hiddenMenu.classList.toggle('show');
+    console.log("clicking")
 });
