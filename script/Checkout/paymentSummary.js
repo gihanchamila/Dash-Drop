@@ -41,7 +41,7 @@ const paymentSummaryHTML = `
                                 </div>
                                 <div class="payment-summary-row order-now">
                                     <div >Order Total</div>
-                                    <div class="payment-summary-money">${formatCurrency(totalCents)}</div>
+                                    <div class="payment-summary-money">$${formatCurrency(totalCents)}</div>
                                 </div>
                                 <button class="payment-summary-button">Buy Now</button>
                             </div>

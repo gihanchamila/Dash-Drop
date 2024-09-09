@@ -2,12 +2,21 @@
     display: none;
 }
 
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height :80vh;
+}
+
 .create-account-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top : 100px;
+    background-color : #f7f7f7;
+    width : 325px;
+    padding : 25px
 }
 
 .create-account-container span {

@@ -86,7 +86,10 @@ body {
     width: 200px; 
     height: 200px;
     padding: 15px;
+
 }
+
+
 
 .popular-catagories-name {
     text-align: left;
@@ -167,6 +170,11 @@ a {
     height: 200px;
     width: 200px;
     padding: 20px;
+}
+
+.product-image:hover {
+    transition: 0.5s ease-in-out;
+    transform : scale(1.1)
 }
 
 .p-text {

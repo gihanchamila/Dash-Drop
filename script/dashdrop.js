@@ -15,7 +15,7 @@ products.forEach((product) => {
             
                 <div class="p-image">
                     <a href="product-details.html?id=${product.id}" target="_blank">
-                        <img id="contentImage" data-product-id="${product.id}" src="${product.image}" class="hover-image">
+                        <img class="product-image" id="contentImage" data-product-id="${product.id}" src="${product.image}" class="hover-image">
                     </a>
                 </div>
                 <div class="p-text">
